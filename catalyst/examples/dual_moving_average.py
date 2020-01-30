@@ -151,14 +151,14 @@ def analyze(context, perf):
 if __name__ == '__main__':
 
     run_algorithm(
-            capital_base=1000,
-            data_frequency='minute',
-            initialize=initialize,
-            handle_data=handle_data,
-            analyze=analyze,
-            exchange_name='bitfinex',
-            algo_namespace=NAMESPACE,
-            quote_currency='usd',
-            start=pd.to_datetime('2017-9-22', utc=True),
-            end=pd.to_datetime('2017-9-23', utc=True),
-        )
+        capital_base=1000,
+        data_frequency='minute',
+        initialize=initialize,
+        handle_data=handle_data,
+        analyze=analyze,
+        exchange_name='bitfinex',
+        algo_namespace=NAMESPACE,
+        quote_currency='usd',
+        start=pd.to_datetime('2017-10-01', utc=True),
+        end=pd.to_datetime('2017-11-10', utc=True),
+        live=False)
