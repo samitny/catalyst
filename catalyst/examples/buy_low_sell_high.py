@@ -39,7 +39,7 @@ def _handle_data(context, data):
         frequency='1D'
     )
     rsi = talib.RSI(prices.values, timeperiod=14)[-1]
-    log.info('got rsi: {}'.format(rsi))
+    log.info('got rsi: {:.2f}'.format(rsi))
 
     # Buying more when RSI is low, this should lower our cost basis
     if rsi <= 30:

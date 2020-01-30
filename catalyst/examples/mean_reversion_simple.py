@@ -131,7 +131,7 @@ def handle_data(context, data):
 
     if rsi[-1] <= context.RSI_OVERSOLD and pos_amount == 0:
         log.info(
-            '{}: buying - price: {}, rsi: {}'.format(
+            '{}: buying - price: {:.2f}, rsi: {:.2f}'.format(
                 data.current_dt, price, rsi[-1]
             )
         )
@@ -144,7 +144,7 @@ def handle_data(context, data):
 
     elif rsi[-1] >= context.RSI_OVERBOUGHT and pos_amount > 0:
         log.info(
-            '{}: selling - price: {}, rsi: {}'.format(
+            '{}: selling - price: {:.3f}, rsi: {:.2f}'.format(
                 data.current_dt, price, rsi[-1]
             )
         )

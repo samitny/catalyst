@@ -29,10 +29,10 @@ def handle_data(context, data):
         frequency='30T'
     )
     last_traded = prices.index[-1]
-    log.info('last candle date: {}'.format(last_traded))
+    log.info('last candle date: {:.2f}'.format(last_traded))
 
     rsi = talib.RSI(prices.values, timeperiod=14)[-1]
-    log.info('got rsi: {}'.format(rsi))
+    log.info('got rsi: {:.2f}'.format(rsi))
 
     # If base_price is not set, we use the current value. This is the
     # price at the first bar which we reference to calculate price_change.
