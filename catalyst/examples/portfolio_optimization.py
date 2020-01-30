@@ -139,13 +139,11 @@ def analyze(context=None, results=None):
 
 if __name__ == '__main__':
     # Bitcoin data is available from 2015-3-2. Dates vary for other tokens.
-    start = datetime(2017, 1, 1, 0, 0, 0, 0, pytz.utc)
-    end = datetime(2017, 8, 16, 0, 0, 0, 0, pytz.utc)
     results = run_algorithm(initialize=initialize,
                             handle_data=handle_data,
                             analyze=analyze,
-                            start=start,
-                            end=end,
+                            start=pd.to_datetime('2017-9-1', utc=True),
+                            end=pd.to_datetime('2017-10-1', utc=True),
                             exchange_name='poloniex',
                             capital_base=100000,
                             live=False,
