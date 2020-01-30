@@ -283,6 +283,7 @@ if __name__ == '__main__':
             quote_currency='eth',
             start=pd.to_datetime('2017-10-01', utc=True),
             end=pd.to_datetime('2017-11-10', utc=True),
+            live=False,
             output=out
         )
         log.info('saved perf stats: {}'.format(out))
