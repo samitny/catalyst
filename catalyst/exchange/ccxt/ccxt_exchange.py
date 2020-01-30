@@ -34,6 +34,7 @@ from redo import retry
 
 log = Logger('CCXT', level=LOG_LEVEL)
 
+# https://ccxt.readthedocs.io/en/latest/exchanges.html
 SUPPORTED_EXCHANGES = dict(
     binance=ccxt.binance,
     bitfinex=ccxt.bitfinex,
