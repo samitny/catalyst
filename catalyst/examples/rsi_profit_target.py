@@ -260,6 +260,7 @@ if __name__ == '__main__':
         exchange_name='poloniex',
         algo_namespace=algo_namespace,
         quote_currency='btc',
+        live=False,
         start=pd.to_datetime('2017-9-1', utc=True),
         end=pd.to_datetime('2017-10-1', utc=True),
     )
